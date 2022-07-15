@@ -1,0 +1,11 @@
+:root {
+    /* color */
+    --color-blue-dark: #016ff9;
+    --color-blue: #60a9ff;
+    --color-blue-light: #e1f1ff;
+    --color-white: #ffffff;
+
+    /* margin */
+    --margin-border: 1px solid #e1f1ff;
+
+}
