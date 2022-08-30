@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,36 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/3ef4088aa9.js" crossorigin="anonymous" defer></script>
 </head>
+
 <body>
 
+    
     <!-- Header -->
     <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
-        </nav>
-        <a href="#" class="logo">
-            <i class="fa-solid fa-camera"></i>
-        </a>
-        <div class="social">
-            <a href="#"><i class="fa-brands fa-behance svg"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f svg"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter svg"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram svg"></i></a>
+        <div class="columns">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </nav>
+            <a href="#" class="logo">
+                <i class="fa-solid fa-camera"></i>
+            </a>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-behance svg"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f svg"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter svg"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram svg"></i></a>
+            </div>
+        </div>
+        <label class="hamburger" for="myCb">||</label>
+        <input type="checkbox" id="myCb">
+        <div class="mobile-navigation">
+            <div class="center">
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
     </header>
 
@@ -54,10 +68,75 @@
                 <img src="./img/load.jpeg" height="400px" alt="" />
                 <img src="./img/winter.jpeg" height="400px" alt="" />
             </div>
-            <div class="fourth">
-                <img src="./img/jump.jpeg" alt="">
+        </div>
+        <div class="fourth">
+            <img src="./img/jump.jpeg" alt="">
+        </div>
+    </div>
+    <div class="text-blocks-outer">
+        <div class="text-blocks">
+            <div class="text-block">
+                <div class="image">
+                    <img src="./img/rock.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h2>B&W Collection</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eligendi fuga officia placeat
+                        quis possimus, delectus eum dignissimos reiciendis quaerat nemo iste itaque repellendus. Cumque
+                        quaerat dolorem culpa quibusdam adipisci?</p>
+                    <a href="" class="btn">More</a>
+                </div>
+            </div>
+            <div class="text-block even">
+                <div class="image">
+                    <img src="./img/mountain.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h2>B&W Collection</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque vitae est amet accusamus
+                        provident modi id veniam alias eveniet officia, voluptatem laborum quaerat exercitationem
+                        necessitatibus possimus fugit nemo, maxime vero.</p>
+                    <a href="" class="btn">More</a>
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="image">
+                    <img src="./img/girl.jpeg" width="564px" alt="">
+                </div>
+                <div class="content">
+                    <h2>B&W Collection</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque omnis dolorem dicta ab,
+                        laudantium, totam quaerat fugit nesciunt commodi optio ut dolor facilis repellat maxime
+                        perferendis eveniet provident culpa inventore!</p>
+                    <a href="" class="btn">More</a>
+                </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="center">
+            <h2>Gey in touch</h2>
+            <form>
+                <div class="fields">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                </div>
+                <button>Send</button>
+            </form>
+            <div class="socials">
+                <h3>Follow me on</h3>
+                <a href="#"><i class="fa-brands fa-behance svg"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f svg"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter svg"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram svg"></i></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

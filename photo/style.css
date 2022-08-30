@@ -15,20 +15,22 @@ img {
 
 /* Header */
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     position: fixed;
-    width: 780px;
-    z-index: 1;
+    z-index: 3;
     top: 0;
-    left: 50%;
-    margin-left: -390px;
+    width: 100%;
     padding: 20px 0;
+}
+header .columns {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 header a.logo {
     color: #bd9a59;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
 }
 header .social {
@@ -41,8 +43,76 @@ header .social .svg {
 }
 header nav a {
     color: #777;
-    font-size: 12px;
+    font-size: 16px;
     margin-right: 10px;
+}
+header label.hamburger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transform: rotate(90deg);
+    z-index: 10;
+    color: #777;
+    font-size: 22px;
+    border: 0;
+    display: none;
+}
+header .mobile-navigation {
+    background-color: #fff;
+    padding: 100px 50px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+header .mobile-navigation .center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header .mobile-navigation a {
+    display: block;
+    color: #bd9a59;
+    padding: 16px;
+    width: 100%;
+    border-bottom: 1px solid #d8d7d4;
+    font-size: 22px;
+}
+header .mobile-navigation a:last-child {
+    border-bottom: 0;
+}
+header input[type="checkbox"] ~ .mobile-navigation {
+    display: none;
+}
+header input[type="checkbox"]:checked ~ .mobile-navigation {
+    display: block;
+}
+header input[type="checkbox"] {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    header label.hamburger {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    header nav,
+    header .social {
+        display: none;
+    }
+    header a.logo {
+        position: absolute;
+        left: 20px;
+    }
+    header label.hamburger {
+        display: block;
+    }
 }
 
 
@@ -72,7 +142,7 @@ header nav a {
 }
 .intro .content {
     position: relative;
-    z-index: 10;
+    z-index: 1;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 150px;
@@ -87,7 +157,9 @@ header nav a {
     font-size: 16px;
     margin-bottom: 100px;
 }
-a.btn {
+a.btn, 
+button,
+label.hamburger {
     text-transform: uppercase;
     text-decoration: none;
     color: #bd9a59;
@@ -101,6 +173,8 @@ a.btn {
 .recent {
     max-width: 780px;
     margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
 }
 .recent h2 {
     text-align: center;
@@ -123,6 +197,34 @@ a.btn {
 .fourth {
     margin-top: 20px;
 }
+.text-blocks-outer {
+    background-color: #fff;
+}
+.text-blocks {
+    width: 700px;
+    margin: 50px auto 0;
+    padding: 50px 20px;
+}
+.text-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+}
+.text-block:nth-child(even) .image {
+    order: 3;
+}
+.text-block .content {
+    padding: 0 20px 20px;
+    align-self: center;
+}
+.text-block .content p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+.text-block .content a.btn {
+    display: inline-block;
+}
 @media screen and (max-width: 768px) {
     .top3 {
         grid-template-columns: 1fr;
@@ -130,4 +232,80 @@ a.btn {
     .top3 .right {
         grid-template-columns: 1fr 1fr;
     }
+    .text-block {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .text-block:nth-child(even) .image {
+        order: 0;
+    }
+    .text-block .content {
+        text-align: center;
+        max-width: 500px;
+        margin-left: 10px;
+    }
+}
+
+
+/* Footer */
+footer {
+    margin: 0 auto;   
+    background-color: #fff;
+    padding: 50px 0;
+    border-top: 2px solid #d8d7d4;
+}
+.center {
+    max-width: 700px;
+    margin: 0 auto;
+}
+footer h2 {
+    text-align: center;
+    margin: 0 0 30px;
+}
+footer form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+footer .fields {
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid #d8d7d4;
+}
+footer input,
+footer textarea {
+    border: 0;
+    border-bottom: 2px solid #d8d7d4;
+    padding: 5px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+footer textarea {
+    border-bottom: 0;
+}
+footer button {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+footer .socials {
+    text-align: center;
+}
+footer .socials h3 {
+    font-size: 14px;
+    color: #777;
+    margin: 30px 0 10px;
+}
+footer .socials a {
+    text-decoration: none;
+    display: inline-block;
+}
+footer .socials .svg{
+    color: #777;
+    font-size: 20px;
+    margin-left: 10px;
 }
