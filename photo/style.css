@@ -15,7 +15,6 @@ img {
 
 /* Header */
 header {
-    justify-content: space-between;
     position: fixed;
     z-index: 3;
     top: 0;
@@ -208,7 +207,6 @@ label.hamburger {
 .text-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    box-sizing: border-box;
 }
 .text-block:nth-child(even) .image {
     order: 3;
