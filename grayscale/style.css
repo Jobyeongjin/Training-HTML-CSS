@@ -1,0 +1,443 @@
+@import './reset.css';
+
+:root {
+  --main-color: #65A09D;
+  --gray-color: #AFAFAF;
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+
+/* Grobal */
+body {
+  height: 2000px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+.container {
+  width: 1200px;
+}
+
+
+/* Navbar */
+.navbar {
+  z-index: 9;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 10px;
+  margin: 0 auto;
+}
+
+.navbar__logo {
+  color: #CBCBCB;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.navbar__nav {
+  display: flex;
+}
+
+.navbar__nav__item {
+  margin-left: 50px;
+}
+
+.navbar__nav__item a {
+  color: #CBCBCB;
+  font-size: 18px;
+  transition: all ease-in-out .5s;
+}
+
+.navbar__nav__item a:hover {
+  color: var(--main-color);
+}
+
+
+/* Header */
+.header {
+  background-image: url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 920px;
+  width: 100%;
+}
+
+.header::before {
+  content: '';
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black-color);
+}
+
+.header__wrap {
+  z-index: 9;
+  width: 100%;
+  text-align: center;
+}
+
+.header__title {
+  background-image: linear-gradient(#E0E0E0 10%, #8C8C8C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+
+.header__description {
+  color: var(--gray-color);
+  margin: 20px 0 40px 0;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.header__btn {
+  z-index: 9;
+  background-color: var(--main-color);
+  padding: 20px 25px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--white-color);
+  transition: all ease-in-out .3s;
+}
+
+.header__btn:hover {
+  background-color: var(--white-color);
+  color: var(--main-color);
+}
+
+
+/* About */
+.about {
+  background: linear-gradient(#030303 30%, var(--gray-color));
+  width: 100%;
+  height: 750px;
+}
+
+.about__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  margin: 20px 0 100px;
+  text-align: center;
+  color: var(--gray-color);
+}
+
+.about__title {
+  margin: 30px 0;
+  font-size: 36px;
+  color: #fff;
+}
+
+.about__description {
+  line-height: 23px;
+}
+
+.about__link {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+
+/* Project */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+
+/* Shoreline */
+.shoreline {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.shoreline__img {
+  width: 100%;
+}
+
+.shoreline__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  padding: 0 35px;
+  border-left: 5px solid var(--main-color);
+}
+
+.shoreline__title {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.shoreline__description {
+  line-height: 25px;
+  text-align: center;
+  color: var(--gray-color);
+}
+
+
+/* Misty & Mountain */
+.misty, 
+.mountain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.misty__text,
+.mountain__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  transition: all ease-in-out .2s;
+}
+
+.misty__text:hover,
+.mountain__text:hover,
+.misty__img:hover,
+.mountain img:hover {
+  transform: scale(1.05);
+}
+
+.misty__text h4,
+.mountain__text h4 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.misty__text p,
+.mountain__text p {
+  width: 80%;
+  text-align: center;
+  line-height: 25px;
+  color: var(--gray-color);
+}
+
+.misty__img,
+.mountain img {
+  width: 600px;
+  transition: all ease-in-out .2s;
+}
+
+.mountain img {
+  order: 1;
+}
+
+
+/* Sign-up */
+.sign-up {
+  position: relative;
+  background-image: url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/demo-image-02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin-top: 40px;
+}
+
+.sign-up__overlay {
+  background-color: var(--black-color);
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+}
+
+.sign-up__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up__icon {
+  font-size: 28px;
+  color: var(--white-color);
+}
+
+.sign-up__subscribe {
+  margin: 10px 0 20px 0;
+  font-size: 28px;
+  color: var(--white-color);
+}
+
+.sign-up__form {
+  display: flex;
+  width: 700px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.sign-up__input {
+  width: 70%;
+  padding-left: 20px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.sign-up__input:focus {
+  outline: none;
+}
+
+.sign-up__btn {
+  width: 20%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  text-transform: uppercase;
+  color: var(--white-color);
+  opacity: .5;
+  transition: all ease-in-out .2s;
+} 
+
+.sign-up__btn:hover {
+  opacity: 1;
+}
+
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: var(--black-color);
+  
+}
+
+.contact__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.contact__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 200px;
+  border-radius: 10px;
+  margin: 50px 0;
+  background: var(--white-color);
+  box-shadow: 3px 5px var(--main-color);
+  transition: all ease-in-out .5s;
+}
+
+.contact__card:hover {
+  transform: rotate(10deg);
+}
+
+.contact__card:nth-child(2):hover {
+  transform: rotate(-10deg);
+}
+
+.contact__icon {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.contact__text {
+  margin: 10px 0 5px;
+  letter-spacing: 5px;
+}
+
+.contact__line {
+  width: 40px;
+}
+
+.contact__small-text {
+  margin-top: 20px;
+  color: var(--gray-color);
+}
+
+.contact__small-text.empty {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.contact__social {
+  display: flex;
+}
+
+.contact__social__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gray-color);
+  font-size: 21px;
+  opacity: .2;
+  transition: all ease-in-out .5s;
+}
+
+.contact__social__icon:hover {
+  opacity: 1;
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 180px;
+  background-color: var(--black-color);
+  text-align: center;
+  line-height: 12;
+  color: var(--gray-color);
+}
