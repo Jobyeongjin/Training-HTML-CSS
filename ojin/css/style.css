@@ -1,0 +1,98 @@
+@import "./screens/intro.css";
+@import "./screens/magazine.css";
+
+
+/* Global */
+a {
+  text-decoration: none;
+}
+
+
+/* Navbar */
+.navbar {
+  z-index: 30;
+  width: 100%;
+}
+
+
+/* Visual */
+.visual__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.visual__text-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  text-align: end;
+  color: #fff;
+}
+
+
+/* Club */
+.club__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.club__item {
+  display: flex; 
+  align-items: center;
+}
+
+.club__img {
+  width: 180px;
+  height: 175px;
+  transition: all ease .5s;
+}
+
+.club__img:hover {
+  background-color: #fff;
+  opacity: .5;
+}
+
+.club__text {
+  width: 60%;
+  padding-left: 15px;
+}
+
+.club__text p {
+  font-size: .8rem;
+}
+
+@media screen and (max-width: 576px) {
+  .club__items {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__Social {
+    margin-top: 20px;
+    padding-right: 15px;
+  }
+}
+
+
+/* Footer */
+.footer__link a {
+  margin-right: 12px;
+}
+
+.footer__text p {
+  margin: 0;
+  font-size: .8rem;
+}
+
+.footer__Social i {
+  margin-left: 18px;
+  color: #fff;
+}

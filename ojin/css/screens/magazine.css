@@ -1,0 +1,36 @@
+.banner {
+  background-image: url(https://i.pinimg.com/564x/ab/1a/a1/ab1aa172be9cf5eaa2ce7560e89d15fd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
+}
+
+.magazine__img {
+position: relative;
+transition: all 0.3s ease-in-out;
+}
+
+.magazine__img img {
+  width: 100%;
+}
+
+.magazine__img:hover {
+  transform: scale(1.03);
+}
+
+.img-bg {
+  z-index: 3;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .5;
+}
+
+.img-bg:hover {
+  opacity: 0;
+}
+
