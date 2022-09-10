@@ -9,6 +9,7 @@
 .magazine__img {
 position: relative;
 transition: all 0.3s ease-in-out;
+cursor: pointer;
 }
 
 .magazine__img img {

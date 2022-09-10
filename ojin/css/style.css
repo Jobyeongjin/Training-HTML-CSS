@@ -1,5 +1,6 @@
 @import "./screens/intro.css";
 @import "./screens/magazine.css";
+@import "./screens/board.css";
 
 
 /* Global */
@@ -45,6 +46,7 @@ a {
 .club__item {
   display: flex; 
   align-items: center;
+  cursor: pointer;
 }
 
 .club__img {
