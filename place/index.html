@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Place</title>
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" /> -->
+  <script src="https://kit.fontawesome.com/3ef4088aa9.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,17 +16,20 @@
 
 
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <div class="navbar__wrap">
-        <div class="navbar__logo">Start Bootstrap</div>
-        <ul class="navbar__nav">
-          <li class="navbar__nav__item">About</li>
-          <li class="navbar__nav__item">Services</li>
-          <li class="navbar__nav__item">Portfolio</li>
-          <li class="navbar__nav__item">Contact</li>
+      <div class="navbar__logo">Start Bootstrap</div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar__nav navbar-nav">
+          <li class="navbar__nav__item"><a href="#about">About</a></li>
+          <li class="navbar__nav__item"><a href="#service">Services</a></li>
+          <li class="navbar__nav__item"><a href="#portfolio">Portfolio</a></li>
+          <li class="navbar__nav__item"><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+      </div>  
     </div>
   </nav>
 
@@ -44,7 +49,7 @@
 
 
   <!-- Need -->
-  <section class="need">
+  <section class="need" id="about">
     <div class="container">
       <div class="need__wrap wrap">
         <h2 class="need__title">We've got what you need!</h2>
@@ -58,41 +63,39 @@
 
 
   <!-- Service -->
-  <section class="service">
+  <section class="service" id="service">
     <div class="container">
-      <div class="service__wrap">
-        <div class="service__top">
-          <h2 class="service__title">At Your Service</h2>
-          <hr>
+      <div class="service__top">
+        <h2 class="service__title">At Your Service</h2>
+        <hr>
+      </div>
+      <div class="service__items row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="service__item col">
+          <i class="fa-regular fa-gem"></i>
+          <div class="service__text">
+            <h3>Sturdy Themes</h3>
+            <p>Our themes are updated regularly to keep them bug free!</p>
+          </div>
         </div>
-        <div class="service__items">
-          <div class="service__item">
-            <i class="fa-regular fa-gem fa-xl"></i>
-            <div class="service__text">
-              <h3>Sturdy Themes</h3>
-              <p>Our themes are updated regularly to keep them bug free!</p>
-            </div>
+        <div class="service__item col">
+          <i class="fa-solid fa-laptop"></i>
+          <div class="service__text">
+            <h3>Up to Date</h3>
+            <p>All dependencies are kept current to keep things fresh.</p>
           </div>
-          <div class="service__item">
-            <i class="fa-solid fa-laptop fa-xl"></i>
-            <div class="service__text">
-              <h3>Up to Date</h3>
-              <p>All dependencies are kept current to keep things fresh.</p>
-            </div>
+        </div>
+        <div class="service__item col">
+          <i class="fa-solid fa-earth-americas"></i>
+          <div class="service__text">
+            <h3>Ready to Publish</h3>
+            <p>You can use this design as is, or you can make changes!</p>
           </div>
-          <div class="service__item">
-            <i class="fa-solid fa-earth-americas fa-xl"></i>
-            <div class="service__text">
-              <h3>Ready to Publish</h3>
-              <p>You can use this design as is, or you can make changes!</p>
-            </div>
-          </div>
-          <div class="service__item">
-            <i class="fa-regular fa-heart fa-xl"></i>
-            <div class="service__text">
-              <h3>Made with Love</h3>
-              <p>Is it really open source if it's not made with love?</p>
-            </div>
+        </div>
+        <div class="service__item col">
+          <i class="fa-regular fa-heart"></i>
+          <div class="service__text">
+            <h3>Made with Love</h3>
+            <p>Is it really open source if it's not made with love?</p>
           </div>
         </div>
       </div>
@@ -101,45 +104,51 @@
 
 
   <!-- Project -->
-  <section class="project">
+  <section class="project" id="portfolio">
     <div class="project__wrap row g-0">
       <div class="project__item col-lg-4 col-sm-6">
-        <img class="img-fluid" src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/1.jpg" alt="" />
+        <img class="img-fluid"
+          src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/1.jpg" alt="" />
         <div class="project__bg">
           <div class="project__text">Category</div>
           <div class="project__name">Project Name</div>
         </div>
       </div>
       <div class="project__item col-lg-4 col-sm-6">
-        <img class="img-fluid" src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/2.jpg" alt="" />
+        <img class="img-fluid"
+          src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/2.jpg" alt="" />
         <div class="project__bg">
           <div class="project__text">Category</div>
           <div class="project__name">Project Name</div>
         </div>
       </div>
       <div class="project__item col-lg-4 col-sm-6">
-        <img class="img-fluid" src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/3.jpg" alt="" />
+        <img class="img-fluid"
+          src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/3.jpg" alt="" />
         <div class="project__bg">
           <div class="project__text">Category</div>
           <div class="project__name">Project Name</div>
         </div>
       </div>
       <div class="project__item col-lg-4 col-sm-6">
-        <img class="img-fluid" src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/4.jpg" alt="" />
+        <img class="img-fluid"
+          src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/4.jpg" alt="" />
         <div class="project__bg">
           <div class="project__text">Category</div>
           <div class="project__name">Project Name</div>
         </div>
       </div>
       <div class="project__item col-lg-4 col-sm-6">
-        <img class="img-fluid" src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/5.jpg" alt="" />
+        <img class="img-fluid"
+          src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/5.jpg" alt="" />
         <div class="project__bg">
           <div class="project__text">Category</div>
           <div class="project__name">Project Name</div>
         </div>
       </div>
       <div class="project__item col-lg-4 col-sm-6">
-        <img class="img-fluid" src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/6.jpg" alt="" />
+        <img class="img-fluid"
+          src="https://startbootstrap.github.io/startbootstrap-creative/assets/img/portfolio/thumbnails/6.jpg" alt="" />
         <div class="project__bg">
           <div class="project__text">Category</div>
           <div class="project__name">Project Name</div>
@@ -149,7 +158,56 @@
   </section>
 
 
-  <script src="https://kit.fontawesome.com/3ef4088aa9.js" crossorigin="anonymous" defer></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" defer></script> -->
+  <!-- Download -->
+  <section class="download">
+    <div class="container">
+      <h2 class="download__title">Free Download at Start Bootstrap!</h2>
+      <button class="download__btn">download now!</button>
+    </div>
+  </section>
+  
+
+  <!-- Touch -->
+  <section class="touch" id="contact">
+    <div class="container">
+      <div class="touch__text">
+        <h2 class="touch__title">Let's Get In Touch!</h2>
+        <hr>
+        <p class="touch__description">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!
+        </p>
+      </div>
+      <form class="touch__form" action="">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Full name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Phone number</label>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control message" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+          <label for="floatingTextarea">Message</label>
+        </div>
+        <button class="touch__btn">submit</button>
+      </form>
+      <div class="touch__number">
+        <i class="fa-solid fa-mobile-screen-button fa-xl"></i>
+        <p>+1 (555) 123-4567</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Copyright © 2022 - Company Name</p>
+  </footer>
+
+
 </body>
 </html>
